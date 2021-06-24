@@ -1,0 +1,360 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><title>Plebscale | astrid.tech</title><meta name="viewport" content="width=device-width,initial-scale=1.0"/><meta name="description" content="Old PC&#x27;s + Old SBC&#x27;s = Plebian Internal Cloud"/><meta name="twitter:creator" content="astralbijection"/><meta name="twitter:title" content="Plebscale"/><meta name="twitter:description" content="Old PC&#x27;s + Old SBC&#x27;s = Plebian Internal Cloud"/><meta property="og:title" content="Plebscale"/><meta property="og:description" content="Old PC&#x27;s + Old SBC&#x27;s = Plebian Internal Cloud"/><meta property="og:type" content="website"/><meta name="robots" content="follow,index"/><meta property="og:image" content="https:/astrid.tech/_/2021/01/27/pi-clustering/nodezzz.jpeg"/><meta property="twitter:image" content="https:/astrid.tech/_/2021/01/27/pi-clustering/nodezzz.jpeg"/><meta property="twitter:card" content="summary"/><meta property="og:url" content="https:/astrid.tech/projects/plebscale"/><link title="astrid.tech RSS" rel="alternate" type="application/rss+xml" href="https://astrid.tech/rss.xml"/><link title="astrid.tech Atom" rel="alternate" type="application/atom+xml" href="https://astrid.tech/atom.xml"/><link title="astrid.tech JSON feed" rel="alternate" type="application/feed+json" href="https://astrid.tech/feed.json"/><link href="https://github.com/astralbijection" rel="me authn"/><link href="mailto:astrid@astrid.tech" rel="me"/><meta name="next-head-count" content="20"/><link rel="preload" href="/_next/static/css/1d0d198a1c5bdedcad14.css" as="style"/><link rel="stylesheet" href="/_next/static/css/1d0d198a1c5bdedcad14.css" data-n-g=""/><link rel="preload" href="/_next/static/css/ca7caeb58edead2bc8e0.css" as="style"/><link rel="stylesheet" href="/_next/static/css/ca7caeb58edead2bc8e0.css" data-n-p=""/><noscript data-n-css=""></noscript><script defer="" nomodule="" src="/_next/static/chunks/polyfills-e7a279300235e161e32a.js"></script><script src="/_next/static/chunks/webpack-3071412ed8bc8fc49fc7.js" defer=""></script><script src="/_next/static/chunks/framework-2f612445bd50b211f15a.js" defer=""></script><script src="/_next/static/chunks/main-6bd02c179f9e0ec2bd5a.js" defer=""></script><script src="/_next/static/chunks/pages/_app-1658794de36b29c002aa.js" defer=""></script><script src="/_next/static/chunks/545f34e4-37710c009d2bbbd273c3.js" defer=""></script><script src="/_next/static/chunks/0c428ae2-571001351e1ed221a25c.js" defer=""></script><script src="/_next/static/chunks/1bfc9850-fc4f6c929a53a9b582f6.js" defer=""></script><script src="/_next/static/chunks/398-1b9f48eb99654eeda62b.js" defer=""></script><script src="/_next/static/chunks/264-b52c4cdeb9e69930784f.js" defer=""></script><script src="/_next/static/chunks/146-41f4f1c63257555b1b33.js" defer=""></script><script src="/_next/static/chunks/273-386c5389a2be250867e2.js" defer=""></script><script src="/_next/static/chunks/993-2df73c7cf8296f032349.js" defer=""></script><script src="/_next/static/chunks/705-c9d82552f3ea55b2fe7a.js" defer=""></script><script src="/_next/static/chunks/pages/projects/%5Bslug%5D-e2540dca0a4e55b6370e.js" defer=""></script><script src="/_next/static/xu5MpDjzYRyNj4te1Gtrv/_buildManifest.js" defer=""></script><script src="/_next/static/xu5MpDjzYRyNj4te1Gtrv/_ssgManifest.js" defer=""></script></head><body><div id="__next"><nav class="main-navbar navbar navbar-expand-md fixed-top"><a href="/" class="nav-link navbar-brand">astrid.tech</a><button aria-label="Toggle navigation" type="button" class="navbar-toggler"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M250.97 29.357c-106.557-.21-211.806 52.74-203.48 164.053 138.91 11.4 276.71 8.893 414.174.662 10.58-107.69-100.753-164.498-210.693-164.715zm59.876 23.996c11.165 0 20.216 4.468 20.216 9.98 0 5.513-9.051 9.981-20.216 9.981-11.166 0-20.217-4.468-20.217-9.98 0-5.513 9.051-9.98 20.217-9.98zm-111.852 19.83c11.165 0 20.217 4.469 20.217 9.98 0 5.513-9.052 9.981-20.217 9.981s-20.216-4.468-20.217-9.98c0-5.512 9.052-9.98 20.217-9.98zm178.057 34.02c11.165 0 20.216 4.468 20.217 9.98 0 5.512-9.052 9.98-20.217 9.98s-20.217-4.468-20.217-9.98c0-5.512 9.052-9.98 20.217-9.98zm-273.59 21.535c11.165 0 20.216 4.468 20.217 9.98 0 5.513-9.052 9.98-20.217 9.98s-20.217-4.467-20.217-9.98c0-5.512 9.052-9.98 20.217-9.98zm313.77 30.043c11.165 0 20.216 4.468 20.216 9.98 0 5.512-9.051 9.98-20.217 9.98-11.165 0-20.216-4.468-20.216-9.98 0-5.512 9.051-9.98 20.216-9.98zm-137.91 8.045c11.166 0 20.218 4.47 20.216 9.982 0 5.512-9.051 9.98-20.217 9.98-11.165 0-20.216-4.468-20.216-9.98-.002-5.513 9.05-9.982 20.216-9.982zM57.618 212.339c-18.964.405-9.028 24.485 14.383 24.573 128.554 10.208 236.673 9.686 372.117-2.42 16.096-2.708 25.212-13.087 10.824-21.969-131.579 7.67-263.81 10.045-397.324-.184zm403.024 40.612c-131.224 13.6-277.594 10.525-390.065 1.904-46.983-6.226-47.875 46.785-17.014 52.309 146.18 14.663 271.826 10.735 415.137-.53 25.007-1.144 14.554-55.328-8.058-53.683zM20.986 366.679l15.332 9.434c6.342-8.416 17.876-32.05 33.319-32.192 19.122-.174 22.345 39.302 41.98 39.103 22.607-.228 37.828-31.548 52.447-30.882 22.09 1.008 26.333 35.9 43.557 35.928 24.089.04 31.439-36.39 46.805-35.334 21.458 1.475 33.246 28.274 50.879 29.178 19.004.974 30.654-33.027 43.265-32.748 16.61.366 28.31 32.46 54.24 33.193 15.345.434 29.694-37.411 37.005-36.815 14.417 1.174 26.549 20.548 36.085 34.835l15.114-9.776c-12.029-16.216-30.117-44.428-52.558-44.017-20.907.382-25.948 38.114-38.102 37.943-23.28-.328-33.756-32.164-52.598-33.346-19.356-1.214-30.475 33.636-43.353 32.768-18.954-1.277-27.303-29.16-49.475-29.917-19.62-.67-34.121 37.669-46.793 36.044-18.139-2.326-20.226-36.378-43.317-37.836-19.11-1.207-37.562 30.604-50.314 29.999-17.525-.833-25.243-40.224-45.41-39.986-21.826.258-39.145 30.34-48.108 44.424zm47.553 36.174c-8.342.686-18.198 4.251-21.85 12.424-2.452 6.662 19.173 8.558 21.114 8.695 128.615 8.104 254.354 8.26 389.8-1.345 9.225-.655 13.935-3.147 15.252-4.414 3.124-8.208-23.168-13.935-25.818-14.004-185.01-1.178-279.257 2.209-378.498-1.356zm395.555 37.192c-126.786 6.957-283.18 9.384-408.123.707l.521 38.67c135.917 4.617 275.647 3.99 406.658-.088z"></path></svg></button><div class="collapse navbar-collapse"><a class="nav-link active" href="/projects/">Projects</a><a class="nav-link" href="/latest/">Blog</a><div class="navbar-separator"></div><a class="nav-link" href="/about/">About</a></div></nav><div class="root-wrapper expand-height"><div class="text-light large" style="background-color:black;margin:0;padding:15px;padding-left:30px;padding-right:30px"><p style="text-align:center;margin:0"><b>Black Lives Matter.</b> Please consider donating to the<!-- --> <a href="https://www.paypal.me/SLOBailFund">San Luis Obispo, CA Bail Fund</a> <!-- -->or <a href="https://bailfunds.github.io">other bail funds</a> so we can make the world a just and equitable place for all people of all colors.</p></div><div style="background-color:#b3e6c9"><nav class="page-heading_above__2RV0m"><a class="project-detail_backToProjects__lPJYk" href="/projects/"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.854 4.646a.5.5 0 010 .708L3.207 8l2.647 2.646a.5.5 0 01-.708.708l-3-3a.5.5 0 010-.708l3-3a.5.5 0 01.708 0z" clip-rule="evenodd"></path><path fill-rule="evenodd" d="M2.5 8a.5.5 0 01.5-.5h10.5a.5.5 0 010 1H3a.5.5 0 01-.5-.5z" clip-rule="evenodd"></path></svg> Back to Projects</a></nav><header class="page-heading_header__zwjn1"><h1>Plebscale</h1><p>Old PC&#x27;s + Old SBC&#x27;s = Plebian Internal Cloud</p></header></div><div class="longform-layout_container__1bKFt container"><div class="row"><div class="longform-layout_content__gfokN col-lg-8"><article class="longform"><div><p>This project is an internal cloud that is scaled enough to meet the demands of a single pleb like me.</p>
+<h2 id="goals-of-this-project">Goals of this project</h2>
+<ul>
+<li>Learn how to use industry-standard DevOps tools</li>
+<li>Try to adhere to Infrastructure as Code (IaC)</li>
+<li>Give these old devices an actual use</li>
+</ul>
+<h2 id="technology-stack">Technology Stack</h2>
+<h3 id="end-user-services-planned-and-completed">End-User Services, planned and completed</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Name</th><th>Status</th><th>Deployed on</th><th>Description</th></tr></thead><tbody><tr><td>OctoPrint</td><td>Deployed</td><td>Bare Metal</td><td>3D Printer sender with web UI</td></tr><tr><td>Firefly III</td><td>Deployed</td><td>k3s</td><td>Budgeting App</td></tr><tr><td>Printer Image Snapper</td><td>Deployed</td><td>k3s</td><td>Periodically takes pictures of my 3D Printer and uploads them to the internet</td></tr><tr><td>DokuWiki, D&amp;D</td><td>Deployed</td><td>Docker Compose</td><td>A wiki for worldbuilding my D&amp;D campaign</td></tr><tr><td>Trilium Notes</td><td>Deployed</td><td>k3s</td><td>Personal wiki/note-taking for school and more</td></tr><tr><td>Apache Spark</td><td><em>Planned</em></td><td>k3s</td><td>Big Data processing engine</td></tr><tr><td>Jupyter Notebook</td><td><em>Planned</em></td><td>k3s</td><td>Interactive code notebooks</td></tr><tr><td>Bookstack</td><td><em>Planned</em></td><td>k3s</td><td>“Internal” wiki for documenting this thing</td></tr><tr><td>ELabFTW</td><td><em>Planned</em></td><td>k3s</td><td>Lab notes</td></tr><tr><td>NextCloud</td><td><em>Planned</em></td><td>k3s</td><td>Personal cloud</td></tr></tbody></table>
+<h3 id="infrastructure-services">Infrastructure Services</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Name</th><th>Description</th><th>Deployed on</th></tr></thead><tbody><tr><td><a href="https://www.proxmox.com/en/">Proxmox</a></td><td>An open-source Type 1 Hypervisor OS</td><td>Bare metal</td></tr><tr><td><a href="https://k3s.io/">K3s</a></td><td>A lightweight Kubernetes distribution that won’t eat up most of the resources on a Raspberry Pi or craptop</td><td>VM</td></tr><tr><td>MySQL/MariaDB</td><td>Database</td><td>LXC</td></tr><tr><td>Postgres</td><td>Database</td><td>LXC</td></tr><tr><td><a href="https://docs.docker.com/compose/">Docker Compose</a></td><td>Multi-container applications stack, useful for servers dedicated to a single purpose</td><td>Bare metal</td></tr><tr><td>NFS</td><td>File storage</td><td>LXC</td></tr></tbody></table>
+<h3 id="hardware">Hardware</h3>
+<h4 id="flexible-home-resources">Flexible Home Resources</h4>
+<p>These resources share a variety of workloads.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Name</th><th>Model</th><th>Arch</th><th>Processor</th><th>Cores</th><th>RAM (GB)</th><th>Role</th></tr></thead><tbody><tr><td>crappertop<sup id="fnref-fn-1"><a href="#fn-fn-1" class="footnote-ref">fn-1</a></sup></td><td>Acer Aspire E1-510</td><td>amd64</td><td>Pentium N3520</td><td>4</td><td>4</td><td>Proxmox: k3s, nfs</td></tr><tr><td>cracktop<sup id="fnref-fn-2"><a href="#fn-fn-2" class="footnote-ref">fn-2</a></sup></td><td>HP Pavilion x360 13</td><td>amd64</td><td>i5-2520M</td><td>4</td><td>8</td><td>Proxmox: k3s</td></tr><tr><td>thonkpad<sup id="fnref-fn-3"><a href="#fn-fn-3" class="footnote-ref">fn-3</a></sup></td><td>Thinkpad T420</td><td>amd64</td><td>i5-6200U</td><td>4</td><td>8</td><td>Proxmox: k3s, db, nfs</td></tr><tr><td>zerg-1<sup id="fnref-fn-4"><a href="#fn-fn-4" class="footnote-ref">fn-4</a></sup></td><td>Raspberry Pi 3B+</td><td>arm</td><td>BCM2837B0</td><td>4</td><td>1</td><td>k3s</td></tr><tr><td>zerg-2<sup id="fnref-fn-4"><a href="#fn-fn-4" class="footnote-ref">fn-4</a></sup></td><td>Raspberry Pi 3B</td><td>arm</td><td>BCM2837</td><td>4</td><td>1</td><td>k3s</td></tr><tr><td>zerg-3<sup id="fnref-fn-4"><a href="#fn-fn-4" class="footnote-ref">fn-4</a></sup></td><td>Raspberry Pi 2B+</td><td>arm</td><td>BCM2836</td><td>4</td><td>1</td><td>k3s</td></tr><tr><td>zerg-4<sup id="fnref-fn-4"><a href="#fn-fn-4" class="footnote-ref">fn-4</a></sup></td><td>Orange Pi One</td><td>arm</td><td>sun8iw7p1</td><td>4</td><td>0.5</td><td>k3s</td></tr><tr><td><strong>Total</strong></td><td>---</td><td>---</td><td>---</td><td><strong>28</strong></td><td><strong>23.5</strong></td><td><strong>Wasting my Time</strong></td></tr></tbody></table>
+<p>Here’s what it all looks like.</p>
+<a href="/_/2021/01/27/pi-clustering/nodezzz.jpeg"><img src="/_/2021/01/27/pi-clustering/nodezzz.jpeg" alt="Raspberry Pis involved in the cluster." width="1200"/></a>
+<a href="/_/2021/01/21/janky-kube-cluster/cluster.jpeg"><img src="/_/2021/01/21/janky-kube-cluster/cluster.jpeg" alt="Hello from CyberCthulu" width="1200"/></a>
+<h4 id="turnkey-home-resources">Turnkey Home Resources</h4>
+<p>These resources are dedicated to one purpose and one purpose only.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Name</th><th>Model</th><th>Role</th></tr></thead><tbody><tr><td>octopi</td><td>Raspberry Pi 2B+</td><td>OctoPrint</td></tr><tr><td>BANANA</td><td>Lenovo Legion Y530</td><td>Personal Computer: development, work, and gaming</td></tr></tbody></table>
+<h4 id="external-cloud-resources">External Cloud Resources</h4>
+<p>Unfortunately, my internet connection is slow, so anything I want others to be able to use has to be hosted on an external cloud.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Name</th><th>Provider</th><th>Price ($/mo)</th><th>Arch</th><th>Processor</th><th>Cores</th><th>RAM (GB)</th><th>Role</th></tr></thead><tbody><tr><td>contabo</td><td>Contabo</td><td>7.90</td><td>amd64</td><td>Xeon something</td><td>4</td><td>8</td><td>Docker Compose</td></tr><tr><td>oci-1</td><td>Oracle</td><td>0</td><td>amd64</td><td>Xeon something</td><td>1</td><td>1</td><td>Docker Compose</td></tr><tr><td>oci-2</td><td>Oracle</td><td>0</td><td>amd64</td><td>Xeon something</td><td>1</td><td>1</td><td>Docker Compose</td></tr><tr><td><strong>Total</strong></td><td>---</td><td>7.90</td><td>---</td><td>---</td><td><strong>6</strong></td><td><strong>8</strong></td><td><strong>Wasting my Time</strong></td></tr></tbody></table>
+<h3 id="monitoring-services">Monitoring Services</h3>
+<a href="/_/projects/plebscale/59a746baceb1e7c3288f903cc3b01d4895d28a3f.svg"><img src="/_/projects/plebscale/59a746baceb1e7c3288f903cc3b01d4895d28a3f.svg" title="`dot` image" width="1200"/></a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Name</th><th>Type</th><th>Description</th><th>Deployed on</th></tr></thead><tbody><tr><td>Fluent-bit</td><td>Logs</td><td>Reads logs from each node’s containers</td><td>k3s, Docker Compose</td></tr><tr><td>Fluentd</td><td>Logs</td><td>Centrally parses and processes logs</td><td>k3s</td></tr><tr><td>Loki</td><td>Logs</td><td>Stores and indexes logs</td><td>k3s</td></tr><tr><td>Prometheus</td><td>Metrics</td><td>Stores and indexes logs</td><td>k3s</td></tr><tr><td>Loki</td><td>Visualization</td><td>Stores and indexes logs</td><td>k3s</td></tr></tbody></table>
+<a href="/_/projects/plebscale/grafana.png"><img src="/_/projects/plebscale/grafana.png" alt="Look at this graaaaaaaph, every time I look it makes me laugh" width="1200"/></a>
+<h3 id="management-utilities">Management Utilities</h3>
+<ul>
+<li>Ansible — Declaratively configuring servers</li>
+<li>Terraform — Declaratively provisioning resources</li>
+</ul>
+<h3 id="things-i-no-longer-use">Things I no longer use</h3>
+<ul>
+<li>ELK Stack (Elasticsearch, Logstash, Kibana, Filebeat, Metricbeat) — This eats up a ridiculous amount of resources. As in, 6 GB (after attempts to minimize it) just dedicated to logging on a 28 GB cluster.</li>
+</ul>
+<div class="footnotes">
+<hr/>
+<ol>
+<li id="fn-fn-4">Zerg rushing is essentially the “quantity-over-quality” tactic in strategy games: you send many expendable units against the enemy to hopefully overwhelm them.<a href="#fnref-fn-4" class="footnote-backref">↩</a></li>
+<li id="fn-fn-3">:thinking: <a href="https://emoji.gg/assets/emoji/thonk.png">https://emoji.gg/assets/emoji/thonk.png</a><a href="#fnref-fn-3" class="footnote-backref">↩</a></li>
+<li id="fn-fn-2">This is my old laptop. I pulled it out of my backpack one day and saw the screen completely cracked for no good reason whatsoever.<a href="#fnref-fn-2" class="footnote-backref">↩</a></li>
+<li id="fn-fn-1">My mom complained about it being really slow, and even with Linux, it’s still slow. Thus, it’s worse than crap.<a href="#fnref-fn-1" class="footnote-backref">↩</a></li>
+</ol>
+</div></div></article></div><div class="col-lg-4"><div class="longform-layout_sidebarGroup__1maJR"><table style="width:100%"><tbody><tr><th style="min-width:180px"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M12 192h424c6.6 0 12 5.4 12 12v260c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V204c0-6.6 5.4-12 12-12zm436-44v-36c0-26.5-21.5-48-48-48h-48V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H160V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H48C21.5 64 0 85.5 0 112v36c0 6.6 5.4 12 12 12h424c6.6 0 12-5.4 12-12z"></path></svg> <!-- -->Date</th><td class="longform-layout_statusData__1GlEa">1 Jan 2021 to now</td></tr><tr><th style="min-width:180px"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.854 4.146a.5.5 0 010 .708L1.707 8l3.147 3.146a.5.5 0 01-.708.708l-3.5-3.5a.5.5 0 010-.708l3.5-3.5a.5.5 0 01.708 0zm6.292 0a.5.5 0 000 .708L14.293 8l-3.147 3.146a.5.5 0 00.708.708l3.5-3.5a.5.5 0 000-.708l-3.5-3.5a.5.5 0 00-.708 0zm-.999-3.124a.5.5 0 01.33.625l-4 13a.5.5 0 01-.955-.294l4-13a.5.5 0 01.625-.33z" clip-rule="evenodd"></path></svg> <!-- -->Source</th><td class="longform-layout_statusData__1GlEa"><p><a href="https://github.com/astralbijection/astrid.tech-deployment"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 496 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><title>GitHub</title><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg> Github</a></p></td></tr><tr><th style="min-width:180px"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M8 15A7 7 0 108 1a7 7 0 000 14zm0 1A8 8 0 108 0a8 8 0 000 16z" clip-rule="evenodd"></path><path d="M5.25 6.033h1.32c0-.781.458-1.384 1.36-1.384.685 0 1.313.343 1.313 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.007.463h1.307v-.355c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.326 0-2.786.647-2.754 2.533zm1.562 5.516c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z"></path></svg> <!-- -->Status</th><td class="longform-layout_statusData__1GlEa"><span class="badge badge-info">WIP</span></td></tr></tbody></table></div><div class="longform-layout_sidebarGroup__1maJR"><h2>Tags</h2><div><p style="font-size:12pt;margin-bottom:3px"><a href="/t/ansible"><span style="background-color:#00fa04;color:#000000;cursor:pointer" class="tag_tag__1JK8b p-category badge badge-secondary">ansible</span></a><a href="/t/devops"><span style="background-color:#47e000;color:#000000;cursor:pointer" class="tag_tag__1JK8b p-category badge badge-secondary">devops</span></a><a href="/t/docker"><span style="background-color:#2391E6;color:#ffffff;cursor:pointer" class="tag_tag__1JK8b p-category badge badge-secondary">Docker</span></a><a href="/t/kubernetes"><span style="background-color:#0039f5;color:#ffffff;cursor:pointer" class="tag_tag__1JK8b p-category badge badge-secondary">kubernetes</span></a><a href="/t/proxmox"><span style="background-color:#eb0095;color:#ffffff;cursor:pointer" class="tag_tag__1JK8b p-category badge badge-secondary">proxmox</span></a><a href="/t/raspberry-pi"><span style="background-color:#C51A4A;color:#ffffff;cursor:pointer" class="tag_tag__1JK8b p-category badge badge-secondary">Raspberry Pi</span></a><a href="/t/terraform"><span style="background-color:#0084d1;color:#ffffff;cursor:pointer" class="tag_tag__1JK8b p-category badge badge-secondary">terraform</span></a><a href="/t/upcycling"><span style="background-color:#28db00;color:#000000;cursor:pointer" class="tag_tag__1JK8b p-category badge badge-secondary">upcycling</span></a> </p></div></div><div class="longform-layout_sidebarGroup__1maJR"><h2>Similar Projects</h2><ul><li><a href="Goggle Epoxy">Goggle Epoxy</a></li><li><a href="astrid.tech">astrid.tech</a></li></ul></div></div></div></div><div class="container"><section id="comments"><h2>Comments</h2><div class="comments"><div><form class=""><div class="row form-group"><label for="comment-name" class="col-sm-4 col-form-label">Name (leave blank for anonymous)</label><div class="col-sm-8"><input type="text" name="name" id="comment-name" placeholder="Willy Shakespeare" class="form-control"/></div></div><div class="row form-group"><label for="comment-email" class="col-sm-4 col-form-label">Email (required)</label><div class="col-sm-8"><input type="email" name="email" id="comment-email" placeholder="user@example.com" class="form-control"/></div></div><div class="row form-group"><label for="comment-website" class="col-sm-4 col-form-label">Website</label><div class="col-sm-8"><input type="url" name="website" id="comment-website" placeholder="my.cool.site" class="form-control"/></div></div><div class="form-group"><label for="comment-body" class="">Comment (<!-- -->1000<!-- --> chars left)</label><textarea name="body" id="comment-body" placeholder="Type your comment here..." class="form-control"></textarea><small class="form-text text-muted">Markdown formatting is supported.</small></div><div class="row"><button type="button" class="btn btn-primary">Submit!</button></div></form></div></div></section></div></div><footer class="footer_footer__1KZqX"><div class="text-light small container"><div class="col"><nav class="row"><div class="col-6 col-sm-4"><a href="/privacy/">Privacy Policy</a></div><div class="col-6 col-sm-4"><a href="/licenses/">Open Source Licenses</a></div><div class="col-6 col-sm-4"><a href="/about/">About/Contact</a></div></nav></div><div class="col"><p>astrid.tech v<!-- -->2.0.0<!-- --> was created by Astrid Yu with a generous helping of <span title="tea" aria-label="tea" role="img">☕</span> and <span title="witchcraft" aria-label="witchcraft" role="img">🧙‍</span>. See the<!-- --> <a href="/projects/astrid-tech/">self-referential project page</a> <!-- -->or see the code yourself on<!-- --> <a href="https://github.com/astralbijection/astrid.tech">GitHub</a>.</p></div><div class="row"><div class="col"></div></div><div class="row"><div class="text-center col"><a href="https://www.gnu.org/licenses/agpl-3.0.en.html"><img alt="GNU Affero General Public License" width="100" height="40" src="/agpl.png"/></a><p><a href="https://github.com/astralbijection/astrid.tech">The source code of astrid.tech</a> <!-- -->is licensed under the<!-- --> <a href="https://www.gnu.org/licenses/agpl-3.0.en.html">AGPL License</a>.<!-- --> </p></div><div class="text-center col"><p><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png"/></a><br/><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">The page content of astrid.tech</span> <!-- -->by<!-- --> <a xmlns:cc="http://creativecommons.org/ns#" href="https://astrid.tech" property="cc:attributionName" rel="cc:attributionURL">Astrid Yu</a> <!-- -->is licensed under a<!-- --> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.</p></div></div></div></footer></div><script id="__NEXT_DATA__" type="application/json">{"props":{"pageProps":{"project":{"id":6,"slug":"plebscale","assetRoot":"projects/plebscale","title":"Plebscale","status":"wip","description":"Old PC's + Old SBC's = Plebian Internal Cloud","startDate":"2021-01-01T00:00:00.000Z","endDate":null,"url":null,"source":["https://github.com/astralbijection/astrid.tech-deployment"],"thumbnail":"/2021/01/27/pi-clustering/nodezzz.jpeg","content":"\u003cp\u003eThis project is an internal cloud that is scaled enough to meet the demands of a single pleb like me.\u003c/p\u003e\n\u003ch2 id=\"goals-of-this-project\"\u003eGoals of this project\u003c/h2\u003e\n\u003cul\u003e\n\u003cli\u003eLearn how to use industry-standard DevOps tools\u003c/li\u003e\n\u003cli\u003eTry to adhere to Infrastructure as Code (IaC)\u003c/li\u003e\n\u003cli\u003eGive these old devices an actual use\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch2 id=\"technology-stack\"\u003eTechnology Stack\u003c/h2\u003e\n\u003ch3 id=\"end-user-services-planned-and-completed\"\u003eEnd-User Services, planned and completed\u003c/h3\u003e\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\u003ctable\u003e\u003cthead\u003e\u003ctr\u003e\u003cth\u003eName\u003c/th\u003e\u003cth\u003eStatus\u003c/th\u003e\u003cth\u003eDeployed on\u003c/th\u003e\u003cth\u003eDescription\u003c/th\u003e\u003c/tr\u003e\u003c/thead\u003e\u003ctbody\u003e\u003ctr\u003e\u003ctd\u003eOctoPrint\u003c/td\u003e\u003ctd\u003eDeployed\u003c/td\u003e\u003ctd\u003eBare Metal\u003c/td\u003e\u003ctd\u003e3D Printer sender with web UI\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003eFirefly III\u003c/td\u003e\u003ctd\u003eDeployed\u003c/td\u003e\u003ctd\u003ek3s\u003c/td\u003e\u003ctd\u003eBudgeting App\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003ePrinter Image Snapper\u003c/td\u003e\u003ctd\u003eDeployed\u003c/td\u003e\u003ctd\u003ek3s\u003c/td\u003e\u003ctd\u003ePeriodically takes pictures of my 3D Printer and uploads them to the internet\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003eDokuWiki, D\u0026#x26;D\u003c/td\u003e\u003ctd\u003eDeployed\u003c/td\u003e\u003ctd\u003eDocker Compose\u003c/td\u003e\u003ctd\u003eA wiki for worldbuilding my D\u0026#x26;D campaign\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003eTrilium Notes\u003c/td\u003e\u003ctd\u003eDeployed\u003c/td\u003e\u003ctd\u003ek3s\u003c/td\u003e\u003ctd\u003ePersonal wiki/note-taking for school and more\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003eApache Spark\u003c/td\u003e\u003ctd\u003e\u003cem\u003ePlanned\u003c/em\u003e\u003c/td\u003e\u003ctd\u003ek3s\u003c/td\u003e\u003ctd\u003eBig Data processing engine\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003eJupyter Notebook\u003c/td\u003e\u003ctd\u003e\u003cem\u003ePlanned\u003c/em\u003e\u003c/td\u003e\u003ctd\u003ek3s\u003c/td\u003e\u003ctd\u003eInteractive code notebooks\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003eBookstack\u003c/td\u003e\u003ctd\u003e\u003cem\u003ePlanned\u003c/em\u003e\u003c/td\u003e\u003ctd\u003ek3s\u003c/td\u003e\u003ctd\u003e“Internal” wiki for documenting this thing\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003eELabFTW\u003c/td\u003e\u003ctd\u003e\u003cem\u003ePlanned\u003c/em\u003e\u003c/td\u003e\u003ctd\u003ek3s\u003c/td\u003e\u003ctd\u003eLab notes\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003eNextCloud\u003c/td\u003e\u003ctd\u003e\u003cem\u003ePlanned\u003c/em\u003e\u003c/td\u003e\u003ctd\u003ek3s\u003c/td\u003e\u003ctd\u003ePersonal cloud\u003c/td\u003e\u003c/tr\u003e\u003c/tbody\u003e\u003c/table\u003e\n\u003ch3 id=\"infrastructure-services\"\u003eInfrastructure Services\u003c/h3\u003e\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\u003ctable\u003e\u003cthead\u003e\u003ctr\u003e\u003cth\u003eName\u003c/th\u003e\u003cth\u003eDescription\u003c/th\u003e\u003cth\u003eDeployed on\u003c/th\u003e\u003c/tr\u003e\u003c/thead\u003e\u003ctbody\u003e\u003ctr\u003e\u003ctd\u003e\u003ca href=\"https://www.proxmox.com/en/\"\u003eProxmox\u003c/a\u003e\u003c/td\u003e\u003ctd\u003eAn open-source Type 1 Hypervisor OS\u003c/td\u003e\u003ctd\u003eBare metal\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e\u003ca href=\"https://k3s.io/\"\u003eK3s\u003c/a\u003e\u003c/td\u003e\u003ctd\u003eA lightweight Kubernetes distribution that won’t eat up most of the resources on a Raspberry Pi or craptop\u003c/td\u003e\u003ctd\u003eVM\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003eMySQL/MariaDB\u003c/td\u003e\u003ctd\u003eDatabase\u003c/td\u003e\u003ctd\u003eLXC\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003ePostgres\u003c/td\u003e\u003ctd\u003eDatabase\u003c/td\u003e\u003ctd\u003eLXC\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e\u003ca href=\"https://docs.docker.com/compose/\"\u003eDocker Compose\u003c/a\u003e\u003c/td\u003e\u003ctd\u003eMulti-container applications stack, useful for servers dedicated to a single purpose\u003c/td\u003e\u003ctd\u003eBare metal\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003eNFS\u003c/td\u003e\u003ctd\u003eFile storage\u003c/td\u003e\u003ctd\u003eLXC\u003c/td\u003e\u003c/tr\u003e\u003c/tbody\u003e\u003c/table\u003e\n\u003ch3 id=\"hardware\"\u003eHardware\u003c/h3\u003e\n\u003ch4 id=\"flexible-home-resources\"\u003eFlexible Home Resources\u003c/h4\u003e\n\u003cp\u003eThese resources share a variety of workloads.\u003c/p\u003e\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\u003ctable\u003e\u003cthead\u003e\u003ctr\u003e\u003cth\u003eName\u003c/th\u003e\u003cth\u003eModel\u003c/th\u003e\u003cth\u003eArch\u003c/th\u003e\u003cth\u003eProcessor\u003c/th\u003e\u003cth\u003eCores\u003c/th\u003e\u003cth\u003eRAM (GB)\u003c/th\u003e\u003cth\u003eRole\u003c/th\u003e\u003c/tr\u003e\u003c/thead\u003e\u003ctbody\u003e\u003ctr\u003e\u003ctd\u003ecrappertop\u003csup id=\"fnref-fn-1\"\u003e\u003ca href=\"#fn-fn-1\" class=\"footnote-ref\"\u003efn-1\u003c/a\u003e\u003c/sup\u003e\u003c/td\u003e\u003ctd\u003eAcer Aspire E1-510\u003c/td\u003e\u003ctd\u003eamd64\u003c/td\u003e\u003ctd\u003ePentium N3520\u003c/td\u003e\u003ctd\u003e4\u003c/td\u003e\u003ctd\u003e4\u003c/td\u003e\u003ctd\u003eProxmox: k3s, nfs\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003ecracktop\u003csup id=\"fnref-fn-2\"\u003e\u003ca href=\"#fn-fn-2\" class=\"footnote-ref\"\u003efn-2\u003c/a\u003e\u003c/sup\u003e\u003c/td\u003e\u003ctd\u003eHP Pavilion x360 13\u003c/td\u003e\u003ctd\u003eamd64\u003c/td\u003e\u003ctd\u003ei5-2520M\u003c/td\u003e\u003ctd\u003e4\u003c/td\u003e\u003ctd\u003e8\u003c/td\u003e\u003ctd\u003eProxmox: k3s\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003ethonkpad\u003csup id=\"fnref-fn-3\"\u003e\u003ca href=\"#fn-fn-3\" class=\"footnote-ref\"\u003efn-3\u003c/a\u003e\u003c/sup\u003e\u003c/td\u003e\u003ctd\u003eThinkpad T420\u003c/td\u003e\u003ctd\u003eamd64\u003c/td\u003e\u003ctd\u003ei5-6200U\u003c/td\u003e\u003ctd\u003e4\u003c/td\u003e\u003ctd\u003e8\u003c/td\u003e\u003ctd\u003eProxmox: k3s, db, nfs\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003ezerg-1\u003csup id=\"fnref-fn-4\"\u003e\u003ca href=\"#fn-fn-4\" class=\"footnote-ref\"\u003efn-4\u003c/a\u003e\u003c/sup\u003e\u003c/td\u003e\u003ctd\u003eRaspberry Pi 3B+\u003c/td\u003e\u003ctd\u003earm\u003c/td\u003e\u003ctd\u003eBCM2837B0\u003c/td\u003e\u003ctd\u003e4\u003c/td\u003e\u003ctd\u003e1\u003c/td\u003e\u003ctd\u003ek3s\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003ezerg-2\u003csup id=\"fnref-fn-4\"\u003e\u003ca href=\"#fn-fn-4\" class=\"footnote-ref\"\u003efn-4\u003c/a\u003e\u003c/sup\u003e\u003c/td\u003e\u003ctd\u003eRaspberry Pi 3B\u003c/td\u003e\u003ctd\u003earm\u003c/td\u003e\u003ctd\u003eBCM2837\u003c/td\u003e\u003ctd\u003e4\u003c/td\u003e\u003ctd\u003e1\u003c/td\u003e\u003ctd\u003ek3s\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003ezerg-3\u003csup id=\"fnref-fn-4\"\u003e\u003ca href=\"#fn-fn-4\" class=\"footnote-ref\"\u003efn-4\u003c/a\u003e\u003c/sup\u003e\u003c/td\u003e\u003ctd\u003eRaspberry Pi 2B+\u003c/td\u003e\u003ctd\u003earm\u003c/td\u003e\u003ctd\u003eBCM2836\u003c/td\u003e\u003ctd\u003e4\u003c/td\u003e\u003ctd\u003e1\u003c/td\u003e\u003ctd\u003ek3s\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003ezerg-4\u003csup id=\"fnref-fn-4\"\u003e\u003ca href=\"#fn-fn-4\" class=\"footnote-ref\"\u003efn-4\u003c/a\u003e\u003c/sup\u003e\u003c/td\u003e\u003ctd\u003eOrange Pi One\u003c/td\u003e\u003ctd\u003earm\u003c/td\u003e\u003ctd\u003esun8iw7p1\u003c/td\u003e\u003ctd\u003e4\u003c/td\u003e\u003ctd\u003e0.5\u003c/td\u003e\u003ctd\u003ek3s\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e\u003cstrong\u003eTotal\u003c/strong\u003e\u003c/td\u003e\u003ctd\u003e---\u003c/td\u003e\u003ctd\u003e---\u003c/td\u003e\u003ctd\u003e---\u003c/td\u003e\u003ctd\u003e\u003cstrong\u003e28\u003c/strong\u003e\u003c/td\u003e\u003ctd\u003e\u003cstrong\u003e23.5\u003c/strong\u003e\u003c/td\u003e\u003ctd\u003e\u003cstrong\u003eWasting my Time\u003c/strong\u003e\u003c/td\u003e\u003c/tr\u003e\u003c/tbody\u003e\u003c/table\u003e\n\u003cp\u003eHere’s what it all looks like.\u003c/p\u003e\n\u003cimg src=\"/_/2021/01/27/pi-clustering/nodezzz.jpeg\" alt=\"Raspberry Pis involved in the cluster.\"\u003e\n\u003cimg src=\"/_/2021/01/21/janky-kube-cluster/cluster.jpeg\" alt=\"Hello from CyberCthulu\"\u003e\n\u003ch4 id=\"turnkey-home-resources\"\u003eTurnkey Home Resources\u003c/h4\u003e\n\u003cp\u003eThese resources are dedicated to one purpose and one purpose only.\u003c/p\u003e\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\u003ctable\u003e\u003cthead\u003e\u003ctr\u003e\u003cth\u003eName\u003c/th\u003e\u003cth\u003eModel\u003c/th\u003e\u003cth\u003eRole\u003c/th\u003e\u003c/tr\u003e\u003c/thead\u003e\u003ctbody\u003e\u003ctr\u003e\u003ctd\u003eoctopi\u003c/td\u003e\u003ctd\u003eRaspberry Pi 2B+\u003c/td\u003e\u003ctd\u003eOctoPrint\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003eBANANA\u003c/td\u003e\u003ctd\u003eLenovo Legion Y530\u003c/td\u003e\u003ctd\u003ePersonal Computer: development, work, and gaming\u003c/td\u003e\u003c/tr\u003e\u003c/tbody\u003e\u003c/table\u003e\n\u003ch4 id=\"external-cloud-resources\"\u003eExternal Cloud Resources\u003c/h4\u003e\n\u003cp\u003eUnfortunately, my internet connection is slow, so anything I want others to be able to use has to be hosted on an external cloud.\u003c/p\u003e\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\u003ctable\u003e\u003cthead\u003e\u003ctr\u003e\u003cth\u003eName\u003c/th\u003e\u003cth\u003eProvider\u003c/th\u003e\u003cth\u003ePrice ($/mo)\u003c/th\u003e\u003cth\u003eArch\u003c/th\u003e\u003cth\u003eProcessor\u003c/th\u003e\u003cth\u003eCores\u003c/th\u003e\u003cth\u003eRAM (GB)\u003c/th\u003e\u003cth\u003eRole\u003c/th\u003e\u003c/tr\u003e\u003c/thead\u003e\u003ctbody\u003e\u003ctr\u003e\u003ctd\u003econtabo\u003c/td\u003e\u003ctd\u003eContabo\u003c/td\u003e\u003ctd\u003e7.90\u003c/td\u003e\u003ctd\u003eamd64\u003c/td\u003e\u003ctd\u003eXeon something\u003c/td\u003e\u003ctd\u003e4\u003c/td\u003e\u003ctd\u003e8\u003c/td\u003e\u003ctd\u003eDocker Compose\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003eoci-1\u003c/td\u003e\u003ctd\u003eOracle\u003c/td\u003e\u003ctd\u003e0\u003c/td\u003e\u003ctd\u003eamd64\u003c/td\u003e\u003ctd\u003eXeon something\u003c/td\u003e\u003ctd\u003e1\u003c/td\u003e\u003ctd\u003e1\u003c/td\u003e\u003ctd\u003eDocker Compose\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003eoci-2\u003c/td\u003e\u003ctd\u003eOracle\u003c/td\u003e\u003ctd\u003e0\u003c/td\u003e\u003ctd\u003eamd64\u003c/td\u003e\u003ctd\u003eXeon something\u003c/td\u003e\u003ctd\u003e1\u003c/td\u003e\u003ctd\u003e1\u003c/td\u003e\u003ctd\u003eDocker Compose\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e\u003cstrong\u003eTotal\u003c/strong\u003e\u003c/td\u003e\u003ctd\u003e---\u003c/td\u003e\u003ctd\u003e7.90\u003c/td\u003e\u003ctd\u003e---\u003c/td\u003e\u003ctd\u003e---\u003c/td\u003e\u003ctd\u003e\u003cstrong\u003e6\u003c/strong\u003e\u003c/td\u003e\u003ctd\u003e\u003cstrong\u003e8\u003c/strong\u003e\u003c/td\u003e\u003ctd\u003e\u003cstrong\u003eWasting my Time\u003c/strong\u003e\u003c/td\u003e\u003c/tr\u003e\u003c/tbody\u003e\u003c/table\u003e\n\u003ch3 id=\"monitoring-services\"\u003eMonitoring Services\u003c/h3\u003e\n\u003cimg src=\"/_/projects/plebscale/59a746baceb1e7c3288f903cc3b01d4895d28a3f.svg\" title=\"\u0026#x60;dot\u0026#x60; image\"\u003e\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\u003ctable\u003e\u003cthead\u003e\u003ctr\u003e\u003cth\u003eName\u003c/th\u003e\u003cth\u003eType\u003c/th\u003e\u003cth\u003eDescription\u003c/th\u003e\u003cth\u003eDeployed on\u003c/th\u003e\u003c/tr\u003e\u003c/thead\u003e\u003ctbody\u003e\u003ctr\u003e\u003ctd\u003eFluent-bit\u003c/td\u003e\u003ctd\u003eLogs\u003c/td\u003e\u003ctd\u003eReads logs from each node’s containers\u003c/td\u003e\u003ctd\u003ek3s, Docker Compose\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003eFluentd\u003c/td\u003e\u003ctd\u003eLogs\u003c/td\u003e\u003ctd\u003eCentrally parses and processes logs\u003c/td\u003e\u003ctd\u003ek3s\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003eLoki\u003c/td\u003e\u003ctd\u003eLogs\u003c/td\u003e\u003ctd\u003eStores and indexes logs\u003c/td\u003e\u003ctd\u003ek3s\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003ePrometheus\u003c/td\u003e\u003ctd\u003eMetrics\u003c/td\u003e\u003ctd\u003eStores and indexes logs\u003c/td\u003e\u003ctd\u003ek3s\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003eLoki\u003c/td\u003e\u003ctd\u003eVisualization\u003c/td\u003e\u003ctd\u003eStores and indexes logs\u003c/td\u003e\u003ctd\u003ek3s\u003c/td\u003e\u003c/tr\u003e\u003c/tbody\u003e\u003c/table\u003e\n\u003cimg src=\"/_/projects/plebscale/grafana.png\" alt=\"Look at this graaaaaaaph, every time I look it makes me laugh\"\u003e\n\u003ch3 id=\"management-utilities\"\u003eManagement Utilities\u003c/h3\u003e\n\u003cul\u003e\n\u003cli\u003eAnsible — Declaratively configuring servers\u003c/li\u003e\n\u003cli\u003eTerraform — Declaratively provisioning resources\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch3 id=\"things-i-no-longer-use\"\u003eThings I no longer use\u003c/h3\u003e\n\u003cul\u003e\n\u003cli\u003eELK Stack (Elasticsearch, Logstash, Kibana, Filebeat, Metricbeat) — This eats up a ridiculous amount of resources. As in, 6 GB (after attempts to minimize it) just dedicated to logging on a 28 GB cluster.\u003c/li\u003e\n\u003c/ul\u003e\n\u003cdiv class=\"footnotes\"\u003e\n\u003chr\u003e\n\u003col\u003e\n\u003cli id=\"fn-fn-4\"\u003eZerg rushing is essentially the “quantity-over-quality” tactic in strategy games: you send many expendable units against the enemy to hopefully overwhelm them.\u003ca href=\"#fnref-fn-4\" class=\"footnote-backref\"\u003e↩\u003c/a\u003e\u003c/li\u003e\n\u003cli id=\"fn-fn-3\"\u003e:thinking: \u003ca href=\"https://emoji.gg/assets/emoji/thonk.png\"\u003ehttps://emoji.gg/assets/emoji/thonk.png\u003c/a\u003e\u003ca href=\"#fnref-fn-3\" class=\"footnote-backref\"\u003e↩\u003c/a\u003e\u003c/li\u003e\n\u003cli id=\"fn-fn-2\"\u003eThis is my old laptop. I pulled it out of my backpack one day and saw the screen completely cracked for no good reason whatsoever.\u003ca href=\"#fnref-fn-2\" class=\"footnote-backref\"\u003e↩\u003c/a\u003e\u003c/li\u003e\n\u003cli id=\"fn-fn-1\"\u003eMy mom complained about it being really slow, and even with Linux, it’s still slow. Thus, it’s worse than crap.\u003ca href=\"#fnref-fn-1\" class=\"footnote-backref\"\u003e↩\u003c/a\u003e\u003c/li\u003e\n\u003c/ol\u003e\n\u003c/div\u003e","tags":["ansible","devops","docker","kubernetes","proxmox","raspberry-pi","terraform","upcycling"]},"similar":[{"slug":"goggle-epoxy","title":"Goggle Epoxy"},{"slug":"astrid-tech","title":"astrid.tech"}]},"__N_SSG":true},"page":"/projects/[slug]","query":{"slug":"plebscale"},"buildId":"xu5MpDjzYRyNj4te1Gtrv","isFallback":false,"gsp":true,"scriptLoader":[]}</script></body></html>

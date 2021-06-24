@@ -1,0 +1,205 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "astrid.tech",
+    "home_page_url": "https://astrid.tech",
+    "feed_url": "https://astrid.tech/feed.json",
+    "description": "Astrid Yu's tech blog",
+    "icon": "https://astrid.tech",
+    "author": {
+        "name": "Astrid Yu",
+        "url": "https://astrid.tech"
+    },
+    "items": [
+        {
+            "id": "https://astrid.tech/2021/05/03/third-redesign",
+            "content_html": "So we're already on astrid.tech v2, despite the fact that the footer still says v1. However, I'm feeling like my website is not very flexible anymore, and I want to redesign.\n\nWhy the hell do I want to redesign my website again? There are a couple reasons.\n\nMy current setup is inflexible,…",
+            "url": "https://astrid.tech/2021/05/03/third-redesign",
+            "title": "A third redesign?",
+            "summary": "The grass is always greener on the other side",
+            "date_modified": "2021-05-03T10:17:05.000Z",
+            "author": {
+                "name": "Astrid Yu",
+                "url": "https://astrid.tech"
+            },
+            "tags": [
+                "/projects/astrid-tech",
+                "website",
+                "rust",
+                "scala",
+                "haskell",
+                "python",
+                "django"
+            ]
+        },
+        {
+            "id": "https://astrid.tech/2021/04/18/k8s-freeipa-dns",
+            "content_html": "I have a FreeIPA server that serves DNS on my home network. I wanted to automatically configure it with my Kubernetes ingresses using ExternalDNS. There doesn't seem to be much documentation for this specific setup, so I thought to put together this guide!\n\nRequirements\n\nThis guide will assume that…",
+            "url": "https://astrid.tech/2021/04/18/k8s-freeipa-dns",
+            "title": "How to set up Dynamic DNS on FreeIPA for your Kubernetes Cluster",
+            "date_modified": "2021-04-18T20:35:45.000Z",
+            "author": {
+                "name": "Astrid Yu",
+                "url": "https://astrid.tech"
+            },
+            "tags": [
+                "kubernetes",
+                "freeipa",
+                "dns",
+                "devops"
+            ]
+        },
+        {
+            "id": "https://astrid.tech/2021/04/08/facebook-internship",
+            "content_html": "I'm pleased to announce that I'm going to be a Production Engineering intern at Facebook this upcoming summer! Production engineering is similar to DevOps at other companies, but with software engineering tasks, too. Although it's been over a month since my interviews, I hope I can leave a record of…",
+            "url": "https://astrid.tech/2021/04/08/facebook-internship",
+            "title": "Interviewing for Facebook",
+            "summary": " ",
+            "date_modified": "2021-04-08T19:48:35.000Z",
+            "author": {
+                "name": "Astrid Yu",
+                "url": "https://astrid.tech"
+            },
+            "tags": [
+                "coding-test",
+                "linux",
+                "devops",
+                "cli",
+                "databases",
+                "internship",
+                "job-interview",
+                "facebook"
+            ]
+        },
+        {
+            "id": "https://astrid.tech/2021/03/26/broken-speakers",
+            "content_html": "I have these Z506 speakers that I got for cheap on eBay a couple years ago. They worked pretty well until one day, the audio was extremely loud and the potentiometer was not able to turn the sound down, so I had to either run my audio at 4% or not at all.\n\nThe Z506 Speakers from Logitech.\n\nThat's…",
+            "url": "https://astrid.tech/2021/03/26/broken-speakers",
+            "title": "My speaker is broken, what do?",
+            "summary": "Cracking open a hard one with no one but myself because there's a pandemic outside",
+            "date_modified": "2021-03-26T20:33:50.000Z",
+            "author": {
+                "name": "Astrid Yu",
+                "url": "https://astrid.tech"
+            },
+            "tags": [
+                "electrical-engineering"
+            ]
+        },
+        {
+            "id": "https://astrid.tech/2021/02/13/terraform-mysql-k8s",
+            "content_html": "Firefly III is a budget management app that I'm trying to self-host. Being a budget management app, it would hold every single monetary transaction I make, which is obviously somewhat sensitive. As such, I'm running it on my local cluster instead of on a public cloud instance that also hosts my…",
+            "url": "https://astrid.tech/2021/02/13/terraform-mysql-k8s",
+            "title": "Declaratively Provision Databases and Submit Credentials to Kubernetes using Terraform",
+            "summary": "DATABASES! I didn't say it, I DECLARED it!",
+            "date_modified": "2021-02-13T20:10:50.000Z",
+            "author": {
+                "name": "Astrid Yu",
+                "url": "https://astrid.tech"
+            },
+            "tags": [
+                "/projects/plebscale/",
+                "terraform",
+                "mysql",
+                "proxmox",
+                "kubernetes",
+                "devops"
+            ]
+        },
+        {
+            "id": "https://astrid.tech/2021/02/07/grafana-debugging",
+            "content_html": "…",
+            "url": "https://astrid.tech/2021/02/07/grafana-debugging",
+            "title": "Taking pictures with Kubernetes and debugging it with Grafana",
+            "summary": "A case of mistaken causes",
+            "date_modified": "2021-02-07T10:37:00.000Z",
+            "author": {
+                "name": "Astrid Yu",
+                "url": "https://astrid.tech"
+            },
+            "tags": [
+                "/projects/plebscale/",
+                "/projects/quadfrost-leds/",
+                "kubernetes",
+                "grafana",
+                "devops"
+            ]
+        },
+        {
+            "id": "https://astrid.tech/2021/01/27/pi-clustering",
+            "content_html": "Look at all of these single-board computers lying around. What are they even doing? Literally nothing. Let's put them to good use.\n\nTwo Pi 3's, one Pi 2, and one Orange Pi one\n\nRaspberry Pi SD Cards\n\nI got the latest Raspbian Buster Lite image and extracted the image. To make things easier on…",
+            "url": "https://astrid.tech/2021/01/27/pi-clustering",
+            "title": "Adding Pi's to a cluster",
+            "summary": "Zerg-rushing server workloads",
+            "date_modified": "2021-01-27T06:29:00.000Z",
+            "author": {
+                "name": "Astrid Yu",
+                "url": "https://astrid.tech"
+            },
+            "tags": [
+                "/projects/plebscale/",
+                "kubernetes",
+                "devops",
+                "raspberry-pi"
+            ]
+        },
+        {
+            "id": "https://astrid.tech/2021/01/21/janky-kube-cluster",
+            "content_html": "In my last post had 7 things I wanted to do. Well, here's a summary of everything I did so far. The IaC repo is here and the last commit before I published this article was d18736.\n\nEDIT: It has come to my attention that I'm missing a picture. Anyways, here's what the cluster looks like.\n\nHello from…",
+            "url": "https://astrid.tech/2021/01/21/janky-kube-cluster",
+            "title": "A Kubernetes cluster but it's only made of used computers",
+            "summary": "16-year-old me would be proud",
+            "date_modified": "2021-01-21T06:14:00.000Z",
+            "author": {
+                "name": "Astrid Yu",
+                "url": "https://astrid.tech"
+            },
+            "tags": [
+                "/projects/plebscale/",
+                "kubernetes",
+                "docker",
+                "server",
+                "devops",
+                "elk",
+                "proxmox"
+            ]
+        },
+        {
+            "id": "https://astrid.tech/2021/01/18/selfhost",
+            "content_html": "Setting servers up is a pain in the ass. There's so many installation steps for each service, and then there's the potential for conflicting services, and then when you have to set everything up again due to migration or something like that, you give up because it's just so much manual work.…",
+            "url": "https://astrid.tech/2021/01/18/selfhost",
+            "title": "Simple Self-Hosting with Docker",
+            "summary": "\"But it works on my computer!\" \"Then we'll ship your computer.\"\n",
+            "date_modified": "2021-01-18T15:49:00.000Z",
+            "author": {
+                "name": "Astrid Yu",
+                "url": "https://astrid.tech"
+            },
+            "tags": [
+                "docker",
+                "server",
+                "devops"
+            ]
+        },
+        {
+            "id": "https://astrid.tech/2020/12/20/backend",
+            "content_html": "My website currently only has a frontend. Now, that's cool and all, but I want my website to be fancier than that, and have more user interactability that I can customize.\n\nOkay, yes, there's no one visiting my site to begin with, but that won't stop me from wasting my time on this!\n\nSome tasks,…",
+            "url": "https://astrid.tech/2020/12/20/backend",
+            "title": "Adding a Backend to astrid.tech",
+            "summary": "You thought I was done with this website?",
+            "date_modified": "2020-12-20T00:00:00.000Z",
+            "author": {
+                "name": "Astrid Yu",
+                "url": "https://astrid.tech"
+            },
+            "tags": [
+                "/projects/astrid-tech/",
+                "python",
+                "django",
+                "gatsby-js",
+                "next-js",
+                "docker",
+                "kubernetes"
+            ]
+        }
+    ]
+}

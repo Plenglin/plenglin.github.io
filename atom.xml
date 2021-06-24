@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://astrid.tech</id>
+    <title>astrid.tech</title>
+    <updated>2021-06-24T04:32:50.192Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <author>
+        <name>Astrid Yu</name>
+        <email>astrid@astrid.tech</email>
+        <uri>https://astrid.tech</uri>
+    </author>
+    <link rel="alternate" href="https://astrid.tech"/>
+    <link rel="self" href="https://astrid.tech/atom.xml"/>
+    <subtitle>Astrid Yu's tech blog</subtitle>
+    <logo>https://astrid.tech</logo>
+    <icon>https://astrid.tech</icon>
+    <rights>All rights reserved 2021, Astrid Yu</rights>
+    <category term="Technology"/>
+    <entry>
+        <title type="html"><![CDATA[A third redesign?]]></title>
+        <id>https://astrid.tech/2021/05/03/third-redesign</id>
+        <link href="https://astrid.tech/2021/05/03/third-redesign"/>
+        <updated>2021-05-03T10:17:05.000Z</updated>
+        <summary type="html"><![CDATA[The grass is always greener on the other side]]></summary>
+        <content type="html"><![CDATA[So we're already on astrid.tech v2, despite the fact that the footer still says v1. However, I'm feeling like my website is not very flexible anymore, and I want to redesign.
+
+Why the hell do I want to redesign my website again? There are a couple reasons.
+
+My current setup is inflexible,…]]></content>
+        <author>
+            <name>Astrid Yu</name>
+            <email>astrid@astrid.tech</email>
+            <uri>https://astrid.tech</uri>
+        </author>
+        <category label="/projects/astrid-tech"/>
+        <category label="website"/>
+        <category label="rust"/>
+        <category label="scala"/>
+        <category label="haskell"/>
+        <category label="python"/>
+        <category label="django"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[How to set up Dynamic DNS on FreeIPA for your Kubernetes Cluster]]></title>
+        <id>https://astrid.tech/2021/04/18/k8s-freeipa-dns</id>
+        <link href="https://astrid.tech/2021/04/18/k8s-freeipa-dns"/>
+        <updated>2021-04-18T20:35:45.000Z</updated>
+        <content type="html"><![CDATA[I have a FreeIPA server that serves DNS on my home network. I wanted to automatically configure it with my Kubernetes ingresses using ExternalDNS. There doesn't seem to be much documentation for this specific setup, so I thought to put together this guide!
+
+Requirements
+
+This guide will assume that…]]></content>
+        <author>
+            <name>Astrid Yu</name>
+            <email>astrid@astrid.tech</email>
+            <uri>https://astrid.tech</uri>
+        </author>
+        <category label="kubernetes"/>
+        <category label="freeipa"/>
+        <category label="dns"/>
+        <category label="devops"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Interviewing for Facebook]]></title>
+        <id>https://astrid.tech/2021/04/08/facebook-internship</id>
+        <link href="https://astrid.tech/2021/04/08/facebook-internship"/>
+        <updated>2021-04-08T19:48:35.000Z</updated>
+        <summary type="html"><![CDATA[ ]]></summary>
+        <content type="html"><![CDATA[I'm pleased to announce that I'm going to be a Production Engineering intern at Facebook this upcoming summer! Production engineering is similar to DevOps at other companies, but with software engineering tasks, too. Although it's been over a month since my interviews, I hope I can leave a record of…]]></content>
+        <author>
+            <name>Astrid Yu</name>
+            <email>astrid@astrid.tech</email>
+            <uri>https://astrid.tech</uri>
+        </author>
+        <category label="coding-test"/>
+        <category label="linux"/>
+        <category label="devops"/>
+        <category label="cli"/>
+        <category label="databases"/>
+        <category label="internship"/>
+        <category label="job-interview"/>
+        <category label="facebook"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[My speaker is broken, what do?]]></title>
+        <id>https://astrid.tech/2021/03/26/broken-speakers</id>
+        <link href="https://astrid.tech/2021/03/26/broken-speakers"/>
+        <updated>2021-03-26T20:33:50.000Z</updated>
+        <summary type="html"><![CDATA[Cracking open a hard one with no one but myself because there's a pandemic outside]]></summary>
+        <content type="html"><![CDATA[I have these Z506 speakers that I got for cheap on eBay a couple years ago. They worked pretty well until one day, the audio was extremely loud and the potentiometer was not able to turn the sound down, so I had to either run my audio at 4% or not at all.
+
+The Z506 Speakers from Logitech.
+
+That's…]]></content>
+        <author>
+            <name>Astrid Yu</name>
+            <email>astrid@astrid.tech</email>
+            <uri>https://astrid.tech</uri>
+        </author>
+        <category label="electrical-engineering"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Declaratively Provision Databases and Submit Credentials to Kubernetes using Terraform]]></title>
+        <id>https://astrid.tech/2021/02/13/terraform-mysql-k8s</id>
+        <link href="https://astrid.tech/2021/02/13/terraform-mysql-k8s"/>
+        <updated>2021-02-13T20:10:50.000Z</updated>
+        <summary type="html"><![CDATA[DATABASES! I didn't say it, I DECLARED it!]]></summary>
+        <content type="html"><![CDATA[Firefly III is a budget management app that I'm trying to self-host. Being a budget management app, it would hold every single monetary transaction I make, which is obviously somewhat sensitive. As such, I'm running it on my local cluster instead of on a public cloud instance that also hosts my…]]></content>
+        <author>
+            <name>Astrid Yu</name>
+            <email>astrid@astrid.tech</email>
+            <uri>https://astrid.tech</uri>
+        </author>
+        <category label="/projects/plebscale/"/>
+        <category label="terraform"/>
+        <category label="mysql"/>
+        <category label="proxmox"/>
+        <category label="kubernetes"/>
+        <category label="devops"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Taking pictures with Kubernetes and debugging it with Grafana]]></title>
+        <id>https://astrid.tech/2021/02/07/grafana-debugging</id>
+        <link href="https://astrid.tech/2021/02/07/grafana-debugging"/>
+        <updated>2021-02-07T10:37:00.000Z</updated>
+        <summary type="html"><![CDATA[A case of mistaken causes]]></summary>
+        <content type="html"><![CDATA[…]]></content>
+        <author>
+            <name>Astrid Yu</name>
+            <email>astrid@astrid.tech</email>
+            <uri>https://astrid.tech</uri>
+        </author>
+        <category label="/projects/plebscale/"/>
+        <category label="/projects/quadfrost-leds/"/>
+        <category label="kubernetes"/>
+        <category label="grafana"/>
+        <category label="devops"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Adding Pi's to a cluster]]></title>
+        <id>https://astrid.tech/2021/01/27/pi-clustering</id>
+        <link href="https://astrid.tech/2021/01/27/pi-clustering"/>
+        <updated>2021-01-27T06:29:00.000Z</updated>
+        <summary type="html"><![CDATA[Zerg-rushing server workloads]]></summary>
+        <content type="html"><![CDATA[Look at all of these single-board computers lying around. What are they even doing? Literally nothing. Let's put them to good use.
+
+Two Pi 3's, one Pi 2, and one Orange Pi one
+
+Raspberry Pi SD Cards
+
+I got the latest Raspbian Buster Lite image and extracted the image. To make things easier on…]]></content>
+        <author>
+            <name>Astrid Yu</name>
+            <email>astrid@astrid.tech</email>
+            <uri>https://astrid.tech</uri>
+        </author>
+        <category label="/projects/plebscale/"/>
+        <category label="kubernetes"/>
+        <category label="devops"/>
+        <category label="raspberry-pi"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[A Kubernetes cluster but it's only made of used computers]]></title>
+        <id>https://astrid.tech/2021/01/21/janky-kube-cluster</id>
+        <link href="https://astrid.tech/2021/01/21/janky-kube-cluster"/>
+        <updated>2021-01-21T06:14:00.000Z</updated>
+        <summary type="html"><![CDATA[16-year-old me would be proud]]></summary>
+        <content type="html"><![CDATA[In my last post had 7 things I wanted to do. Well, here's a summary of everything I did so far. The IaC repo is here and the last commit before I published this article was d18736.
+
+EDIT: It has come to my attention that I'm missing a picture. Anyways, here's what the cluster looks like.
+
+Hello from…]]></content>
+        <author>
+            <name>Astrid Yu</name>
+            <email>astrid@astrid.tech</email>
+            <uri>https://astrid.tech</uri>
+        </author>
+        <category label="/projects/plebscale/"/>
+        <category label="kubernetes"/>
+        <category label="docker"/>
+        <category label="server"/>
+        <category label="devops"/>
+        <category label="elk"/>
+        <category label="proxmox"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Simple Self-Hosting with Docker]]></title>
+        <id>https://astrid.tech/2021/01/18/selfhost</id>
+        <link href="https://astrid.tech/2021/01/18/selfhost"/>
+        <updated>2021-01-18T15:49:00.000Z</updated>
+        <summary type="html"><![CDATA["But it works on my computer!" "Then we'll ship your computer."
+]]></summary>
+        <content type="html"><![CDATA[Setting servers up is a pain in the ass. There's so many installation steps for each service, and then there's the potential for conflicting services, and then when you have to set everything up again due to migration or something like that, you give up because it's just so much manual work.…]]></content>
+        <author>
+            <name>Astrid Yu</name>
+            <email>astrid@astrid.tech</email>
+            <uri>https://astrid.tech</uri>
+        </author>
+        <category label="docker"/>
+        <category label="server"/>
+        <category label="devops"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Adding a Backend to astrid.tech]]></title>
+        <id>https://astrid.tech/2020/12/20/backend</id>
+        <link href="https://astrid.tech/2020/12/20/backend"/>
+        <updated>2020-12-20T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[You thought I was done with this website?]]></summary>
+        <content type="html"><![CDATA[My website currently only has a frontend. Now, that's cool and all, but I want my website to be fancier than that, and have more user interactability that I can customize.
+
+Okay, yes, there's no one visiting my site to begin with, but that won't stop me from wasting my time on this!
+
+Some tasks,…]]></content>
+        <author>
+            <name>Astrid Yu</name>
+            <email>astrid@astrid.tech</email>
+            <uri>https://astrid.tech</uri>
+        </author>
+        <category label="/projects/astrid-tech/"/>
+        <category label="python"/>
+        <category label="django"/>
+        <category label="gatsby-js"/>
+        <category label="next-js"/>
+        <category label="docker"/>
+        <category label="kubernetes"/>
+    </entry>
+</feed>
